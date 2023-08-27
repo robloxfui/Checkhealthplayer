@@ -1,0 +1,252 @@
+   local what = game:GetService("CoreGui"):FindFirstChild("Hee")
+    if what then
+        what:Destroy()
+    end
+    
+    local ScreenGui = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local Targethead = Instance.new("ImageLabel")
+    local UICorner_2 = Instance.new("UICorner")
+    local Healthbar = Instance.new("Frame")
+    local UICorner_3 = Instance.new("UICorner")
+    local UIGradient = Instance.new("UIGradient")
+    local Name = Instance.new("TextLabel")
+    local DropShadowHolder = Instance.new("Frame")
+    local DropShadow = Instance.new("ImageLabel")
+    local Hppercent = Instance.new("TextLabel")
+    
+    
+    ScreenGui.Parent = game:GetService("CoreGui")
+    ScreenGui.Name = "Hee"
+    
+    
+    Frame.Parent = ScreenGui
+    Frame.BackgroundColor3 = Color3.fromRGB(55, 55, 56)
+    Frame.BackgroundTransparency = 0.650
+    Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+    Frame.BorderSizePixel = 0
+    Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Frame.Size = UDim2.new(0, 322, 0, 100)
+    
+    UICorner.CornerRadius = UDim.new(0.100000001, 8)
+    UICorner.Parent = Frame
+    
+    Targethead.Name = "Targethead"
+    Targethead.Parent = Frame
+    Targethead.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Targethead.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Targethead.BorderSizePixel = 0
+    Targethead.Position = UDim2.new(0.0371428579, 0, 0.119999997, 0)
+    Targethead.Size = UDim2.new(0, 75, 0, 75)
+    Targethead.Image = 'rbxthumb://type=AvatarHeadShot&id=1&w=420&h=420'
+    
+    UICorner_2.Parent = Targethead
+    
+    Healthbar.Name = "Healthbar"
+    Healthbar.Parent = Frame
+    Healthbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Healthbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Healthbar.BorderSizePixel = 0
+    Healthbar.Position = UDim2.new(0.300000012, 0, 0, 55)
+    Healthbar.Size = UDim2.new(0, 200, 0,10)
+    
+    UICorner_3.Parent = Healthbar
+    
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 255, 5)), ColorSequenceKeypoint.new(0.49, Color3.fromRGB(0, 255, 5)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 5))}
+    UIGradient.Offset = Vector2.new(1, 0)
+    UIGradient.Parent = Healthbar
+    
+    Name.Name = "Name"
+    Name.Parent = Frame
+    Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Name.BackgroundTransparency = 1.000
+    Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Name.BorderSizePixel = 0
+    Name.Position = UDim2.new(0.291428566, 0, 0, 0)
+    Name.Size = UDim2.new(0, 200, 0, 50)
+    Name.Font = Enum.Font.TitilliumWeb
+    Name.Text = ""
+    Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Name.TextSize = 28.000
+    Name.TextXAlignment = Enum.TextXAlignment.Left
+    
+    DropShadowHolder.Name = "DropShadowHolder"
+    DropShadowHolder.Parent = Frame
+    DropShadowHolder.BackgroundColor3 = Color3.fromRGB(252, 250, 255)
+    DropShadowHolder.BackgroundTransparency = 1.000
+    DropShadowHolder.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    DropShadowHolder.BorderSizePixel = 0
+    DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
+    DropShadowHolder.ZIndex = 0
+    
+    DropShadow.Name = "DropShadow"
+    DropShadow.Parent = DropShadowHolder
+    DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+    DropShadow.BackgroundColor3 = Color3.fromRGB(252, 250, 255)
+    DropShadow.BackgroundTransparency = 1.000
+    DropShadow.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    DropShadow.BorderSizePixel = 0
+    DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+    DropShadow.Size = UDim2.new(1, 47, 1, 47)
+    DropShadow.ZIndex = 0
+    DropShadow.Image = "rbxassetid://6014261993"
+    DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+    DropShadow.ImageTransparency = 0.500
+    DropShadow.ScaleType = Enum.ScaleType.Slice
+    DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
+    
+    Hppercent.Name = "Hppercent"
+    Hppercent.Parent = Frame
+    Hppercent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Hppercent.BackgroundTransparency = 1.000
+    Hppercent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Hppercent.BorderSizePixel = 0
+    Hppercent.Position = UDim2.new(0.3,0,0.3,0)
+    Hppercent.Size = UDim2.new(0, 21, 0, 24)
+    Hppercent.Font = Enum.Font.TitilliumWeb
+    Hppercent.Text = "100"
+    Hppercent.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Hppercent.TextSize = 24.000
+    
+    local function TQFZB_fake_script() 
+        local script = Instance.new('LocalScript', UIGradient)
+    
+        local tw = game:GetService("TweenService")
+        
+        local twinfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1, true)
+        
+        local tween = tw:Create(script.Parent, twinfo, {Offset = Vector2.new(-1, 0)})
+        
+        tween:Play()
+    end
+    coroutine.wrap(TQFZB_fake_script)()
+    
+    local UIS = game:GetService("UserInputService")
+    function dragify(Frame)
+        dragToggle = nil
+        dragSpeed = 0.15
+        dragInput = nil
+        dragStart = nil
+        dragPos = nil
+        function updateInput(input)
+            Delta = input.Position - dragStart
+            Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+            game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.15), {Position = Position}):Play()
+        end
+        Frame.InputBegan:Connect(function(input)
+            if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+                dragToggle = true
+                dragStart = input.Position
+                startPos = Frame.Position
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragToggle = false
+                    end
+                end)
+            end
+        end)
+        Frame.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragToggle then
+                updateInput(input)
+            end
+        end)
+    end
+    
+    dragify(Frame)
+    
+    local function updateHealthbarSize(nearestPlayer)
+        local human = nearestPlayer.Character and nearestPlayer.Character:FindFirstChild("Humanoid")
+        if human then
+            local maxHealth = human.MaxHealth
+            local currentHealth = human.Health
+            local healthPercentage = math.min((currentHealth / maxHealth), 1)
+            local targetWidth = math.floor(200 * healthPercentage) 
+            local targetSize = UDim2.new(0, targetWidth, 0, 10)
+            
+            if Healthbar.Size ~= targetSize then
+                local healthBarSizeTween = game:GetService("TweenService"):Create(Healthbar, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = targetSize})
+                healthBarSizeTween:Play()
+            end
+        end
+    end
+    
+    local function updateHealthPercentage(nearestPlayer)
+        local human = nearestPlayer.Character and nearestPlayer.Character:FindFirstChild("Humanoid")
+        if human then
+            local maxHealth = human.MaxHealth
+            local currentHealth = human.Health
+            local healthPercentage = math.min((currentHealth / maxHealth) * 100, 100) 
+            local formattedPercentage = string.format("%.1f", (healthPercentage / 100) * 100) 
+            Hppercent.Text = formattedPercentage
+        else
+            Hppercent.Text = "Not Found Humanoid"
+        end
+    end
+    
+    
+    local function updateNearestPlayerName()
+        while true do
+            local nearestPlayer = nil
+            local minDistance = math.huge
+            for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+                if otherPlayer ~= game.Players.LocalPlayer then
+                    local distance = (otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart")) and (game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")) and (otherPlayer.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    if distance and distance <= 60 and distance < minDistance then
+                        minDistance = distance
+                        nearestPlayer = otherPlayer
+                    end
+                end
+            end
+            if nearestPlayer then
+                local targetSize = UDim2.new(0, 322, 0, 100)
+                if Frame.Size ~= targetSize then
+                    local sizeTween = game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = targetSize})
+                    sizeTween:Play()
+                    
+                    local nameSizeTween = game:GetService("TweenService"):Create(Name, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {TextTransparency = 0})
+                    nameSizeTween:Play()
+                    
+                    local targetheadSizeTween = game:GetService("TweenService"):Create(Targethead, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 75, 0, 75)})
+                    targetheadSizeTween:Play()
+                    
+                    local percentTransparencyTween = game:GetService("TweenService"):Create(Hppercent, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {TextTransparency = 0})
+                    percentTransparencyTween:Play()
+                     local healthBarSizeTween = game:GetService("TweenService"):Create(Healthbar, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 200, 0, 10)})
+                    healthBarSizeTween:Play()
+                end
+                Frame.Visible = true
+                Name.Text =  nearestPlayer.Name
+                Targethead.Image = 'rbxthumb://type=AvatarHeadShot&id='..nearestPlayer.UserId..'&w=420&h=420'
+            updateHealthPercentage(nearestPlayer)
+            updateHealthbarSize(nearestPlayer) 
+            else
+                local targetSize = UDim2.new(0, 100, 0, 100)
+                if Frame.Size ~= targetSize then
+                    local sizeTween = game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = targetSize})
+                    sizeTween:Play()
+                    
+                    local nameSizeTween = game:GetService("TweenService"):Create(Name, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {TextTransparency = 1})
+                    nameSizeTween:Play()
+                    
+                    local targetheadSizeTween = game:GetService("TweenService"):Create(Targethead, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0)})
+                    targetheadSizeTween:Play()
+                    
+                    local percentTransparencyTween = game:GetService("TweenService"):Create(Hppercent, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {TextTransparency = 1})
+                    percentTransparencyTween:Play()
+                    local healthBarSizeTween = game:GetService("TweenService"):Create(Healthbar, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 10)})
+                    healthBarSizeTween:Play()
+                    wait(0.5)
+                end
+                Frame.Visible = false
+            end
+            wait(0.1) 
+        end
+    end
+    
+    updateNearestPlayerName()
